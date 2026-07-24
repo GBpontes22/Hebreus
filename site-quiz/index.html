@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz de Hebreus - NAA</title>
+    <meta
+      name="description"
+      content="Site de estudo com níveis e perguntas de múltipla escolha sobre o livro de Hebreus, baseado na versão NAA."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar" aria-label="Cabeçalho do quiz">
+        <div class="brand">
+          <img src="assets/logo-er.png" alt="Logo Embaixadores do Rei" class="brand-logo" />
+          <div>
+            <p class="eyebrow">Estudo bíblico - NAA</p>
+            <h1>Trilha de Hebreus</h1>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button class="icon-button" id="resetProgress" type="button" title="Zerar progresso" aria-label="Zerar progresso">
+            ↻
+          </button>
+        </div>
+      </header>
+
+      <section class="status-band" aria-label="Resumo do progresso">
+        <div>
+          <span class="label">Nível atual</span>
+          <strong id="currentLevelLabel">1</strong>
+        </div>
+        <div>
+          <span class="label">Acertos no nível</span>
+          <strong id="levelScoreLabel">0/4</strong>
+        </div>
+        <div>
+          <span class="label">Sequência</span>
+          <strong id="streakLabel">0</strong>
+        </div>
+        <div>
+          <span class="label">Níveis concluídos</span>
+          <strong id="completedLabel">0/13</strong>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="level-panel" aria-label="Lista de níveis">
+          <div class="panel-heading">
+            <p class="eyebrow">Capítulos</p>
+            <h2>Escolha o nível</h2>
+          </div>
+          <div class="level-grid" id="levelGrid"></div>
+          <div class="study-tip">
+            <p class="tip-title">Como passar de nível</p>
+            <p>Acerte pelo menos 3 de 4 perguntas. Se não conseguir, revise o capítulo e tente de novo.</p>
+          </div>
+        </aside>
+
+        <section class="quiz-panel" aria-live="polite">
+          <div class="level-intro">
+            <div>
+              <p class="eyebrow" id="chapterLabel">Hebreus 1</p>
+              <h2 id="levelTitle">Jesus superior aos anjos</h2>
+            </div>
+            <span class="pill" id="levelBadge">Nível 1</span>
+          </div>
+
+          <div class="progress-track" aria-label="Progresso da pergunta atual">
+            <span id="questionProgress"></span>
+          </div>
+
+          <article class="question-box">
+            <p class="reference" id="questionReference">(Hb 1.1-2)</p>
+            <h3 id="questionText">Carregando pergunta...</h3>
+            <div class="options-list" id="optionsList"></div>
+          </article>
+
+          <div class="feedback" id="feedbackBox" hidden></div>
+
+          <div class="quiz-actions">
+            <button class="secondary-button" id="restartLevel" type="button">↻ Refazer nível</button>
+            <button class="primary-button" id="submitAnswer" type="button">✓ Responder</button>
+            <button class="primary-button" id="nextQuestion" type="button" hidden>→ Próxima</button>
+          </div>
+        </section>
+      </section>
+
+      <section class="summary-panel" id="summaryPanel" hidden>
+        <h2>Missão concluída</h2>
+        <p id="summaryText"></p>
+        <button class="primary-button" id="continueButton" type="button">→ Continuar</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
