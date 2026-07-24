@@ -4,13 +4,11 @@ Site estatico com uma trilha de perguntas sobre o livro de Hebreus.
 
 ## Como publicar no GitHub Pages
 
-O repositorio ja inclui um workflow em `.github/workflows/pages.yml` para publicar o site pelo GitHub Pages quando houver push na branch `main`.
+O repositorio esta configurado no GitHub Pages para publicar a partir da branch `main`, pasta `/ (root)`.
 
-Depois de subir para o GitHub, o site deve ficar em:
+O site fica em:
 
-`https://GBpontes22.github.io/NOME_DO_REPOSITORIO/`
-
-Se o Pages ainda nao estiver ativo, abra o repositorio no GitHub e confira `Settings > Pages`. A fonte pode ser `GitHub Actions`.
+`https://gbpontes22.github.io/Hebreus/`
 
 ## Como rodar localmente
 
